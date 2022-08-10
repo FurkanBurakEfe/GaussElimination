@@ -44,6 +44,40 @@ Matrisimizi bu şekilde oluşturduk. bilmemiz gereken bir şey daha var. Matrisl
 |0  0  2|
 
 Bu hale getirmemiz için yapmamız gereken işlem ise şöyledir:
+Bunu yapabilmek için ilk satır kullanılır. Yani alttaki 2 satırın ilk elemanlarını 0 yapmak için 1. satır ile toplandığında 0 olacak şekilde dönüştüreceğiz. şu şekilde anlatayım.
+ilk satırımızın her bir elemanını -1/2 ile çarpıp 2. satır ile toplarsak, (-1/2)*2 + (-1)= 0 olur. 2. satırın ilk elemanı 0 olur ve 2. satırımız değişir. aynı şekilde 3. satırın ilk elemanını sıfır yapmak için ise 2*(-1) + 2 = 0 olur ve matrisimiz şu şekilde değişir.
+
+| 2  8 2||x|____|14|
+
+| 0 2 -2| |y| = |6|
+
+|0  -9  0||z|_____|-9|
+
+şimdi 3. satırın 2. elemanını da 0 yapmamız gerekli bunun için yine 2. satırımızla son satırımızın her bir elemanını topladığımızda 3. satırın 2. elemanını 0 yapacak şekilde düzenlememiz gerekli. Bunu da 2. satırımızı 9/2 ile çarpıp 3. satır ile toplamamız gerekecek. (2*9/2) + -9 = 0 olacak yeni matrisimiz ise şu şekli alacak:
+
+| 2  8 2||x|____|14|
+
+| 0 2 -2| |y| = |6|
+
+|0  0  -9||z|_____|18|
+
+
+şidmi istediğimiz noktaya geldik işte. Yapmamız gereken bir adım daha var. Alttan üste doğru bilinmeyenleri bulup yerine koyup diğer bilinmeyenleri bulacağız. 3. satırımıza baktığımızda sadece -9 kaldı ve bu z bilinmeyenimizi bulmamıza yardımcı olacak. şu şekilde -9z=18 ise z = -2. Şimdi z bilinmeyenimizi artık biliyoruz bu sayede diğer bilinmeyenleri bulmak daha kolay olacak. ikinci satırımıza bakalım burda da ufak bir denklem var: 2y-2z=6 burada z yi biliyoruz z=-2 bunu yerine koyduğumuz zaman 
+
+2y-2*(-2)=6    
+
+y=1
+
+evet şimdi 3 bilinmeyenin ikisini biliyoruz artık son bilinmeyeni bulmak daha kolay. ilk satırımıza bakalım yine bir denklem var elimizde: 
+
+2x+2y+2z=14 bulduğumuz y ve z bilinmeyenini yerine koyalım ve x'i bulalım
+
+2x+2*(1)+2*(-2)=14
+
+x=5
+
+İşte! Gauss eleminasyon yöntemi bu kadar. Biraz karmaşık gelebilir fakat diğer kaynaklardan araştırırsanız daha iyi oturabilir. Okuduğunuz için teşekkürler
+
 
 
 
